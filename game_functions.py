@@ -12,7 +12,9 @@ def check_higher_lower(current_val, next_val, user_input):
     else:
         return True if current_val > next_val else False
 
-        
+
 # function to be used in game_3: Hangman
 def process_guess(letter, board, word):
-    pass
+    for index, char in enumerate(word):
+        if char == letter:
+            board[index] = letter
