@@ -17,4 +17,5 @@ def check_higher_lower(current_val, next_val, user_input):
 def process_guess(letter, board, word):
     for index, char in enumerate(word):
         if char == letter:
-            board[index] = letter
+            return True
+    return False
