@@ -2,7 +2,10 @@ import random
 
 # function to be used by game_1: Guess the Number
 def pick_value(poss_values):
-    x = random.choice(poss_values)   
+    max_value = max(poss_values)
+    min_value = min(poss_values)
+
+    x = min_value + ((max_value - min_value)//2)  
     return x
 
 # function to be used in game_2: Higher or Lower
